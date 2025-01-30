@@ -1,6 +1,6 @@
 
-fetch('../lrtr_edf1', {
+fetch('../ttr_edf1', {
     method: "POST"
-}).then(response => response.text()).then(data => {
+}).then(response => response.json()).then(data => {
     console.log(data);
 }).catch(err => console.log(err));
