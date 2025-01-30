@@ -12,7 +12,6 @@ setInterval(() => {
             data[0].VR.slice(31, 35),
             data[0].VR.slice(37,58)
         );
-        pac3200 = array1.concat(array2).concat(array3).concat(array4);
         for (let i = 0; i < values.length; i++) {
             values[i].innerHTML = pac3200[i].toFixed(2);
         }
