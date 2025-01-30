@@ -30,19 +30,15 @@ header {
     justify-content: space-between;
     padding: 0rem 1rem;
     align-items: center;
+    overflow: hidden;
 }
 
 .header__bottom .logo {
-    width: 20rem;
+    width: 12rem;
     height: 3.5rem;
-    /*background-image: url(../img/logoSMS.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;*/
 }
 
 .header__bottom .logo img {
-
     height: 100%;
 }
 

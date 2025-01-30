@@ -4,7 +4,7 @@ for (let i = 0; i <= 46; i++) {
 }
 
 setInterval(() => {
-    fetch('../ttr_edf1', {
+    fetch('../lrtr_edf1', {
         method: "POST"
     }).then(response => response.json()).then(data => {
         const pac3200 = data[0].VR.slice(0, 21).concat(
