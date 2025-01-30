@@ -3,8 +3,8 @@ const footer = document.querySelector('footer');
 footer.innerHTML = `
     <img src="../img/logout.svg" class="logout">
     <div>
-        <button id="moduleOne">Proceso de bombeo</button>
-        <button id="moduleTwo">Medidor de energia</button>
+        <button id="moduleOne">Edificio 1</button>
+        <button id="moduleTwo">Edificio 2</button>
     </div>
 `;
 //------Change module
