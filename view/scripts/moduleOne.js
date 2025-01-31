@@ -26,12 +26,36 @@ function showChart(a) {
 
 let trend = {};
 let arrayUndefined = [];
+
+
 trend = {
+    labels: arrayUndefined.x,
     datasets: [{
-        data: arrayUndefined,
+        data: arrayUndefined.y[0],
         label: "",
         borderColor: 'rgba(0,161,209,1)',
-        backgroundColor: 'rgba(0,161,209,1)',
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderWidth: 1,
+    },
+    {
+        data: arrayUndefined.y[1],
+        label: "",
+        borderColor: 'rgba(255, 26, 104, 1)',
+        backgroundColor: 'rgba(255, 26, 104, 0.2)',
+        borderWidth: 1,
+    },
+    {
+        data: arrayUndefined.y[2],
+        label: "",
+        borderColor: 'rgb(0, 209, 0)',
+        backgroundColor: 'rgb(30, 150, 6)',
+        borderWidth: 1,
+    },
+    {
+        data: arrayUndefined.y[3],
+        label: "",
+        borderColor: 'rgb(234, 255, 8)',
+        backgroundColor: 'rgb(203, 233, 8)',
         borderWidth: 1,
     }]
 }
@@ -76,10 +100,9 @@ setInterval(() => {
         method: "POST",
         body: JSON.stringify(array)
     }).then(response => response.json()).then(data => {
-        datos = data.reverse();
-        arrayUndefined = [];
+        arrayUndefined = data.reverse();
         datos.forEach(element => {
-            arrayUndefined.push({ x: element.x, y: element.y[0]});
+            arrayUndefined.push({ x: element.x, y: element.y});
         });
         myChart.config.data.datasets[0].data = arrayUndefined;
         myChart.update();
