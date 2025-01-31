@@ -19,9 +19,9 @@ const modalChart = document.getElementById('modalChart');
 const closeModalChart = document.getElementById('closeModalChart');
 closeModalChart.addEventListener('click', () => modalChart.classList.remove('modal__show'));
 const array = [];
-function showChart(a, b, c, d) {
+function showChart(a) {
     modalChart.classList.add('modal__show');
-    array = [a, b, c, d].filter(val => val !== undefined);
+    array = a;
 }
 
 let trend = {};
@@ -29,7 +29,7 @@ let arrayUndefined = [];
 trend = {
     datasets: [{
         data: arrayUndefined,
-        label: "Nivel",
+        label: "",
         borderColor: 'rgba(0,161,209,1)',
         backgroundColor: 'rgba(0,161,209,1)',
         borderWidth: 1,
@@ -79,7 +79,7 @@ setInterval(() => {
         datos = data.reverse();
         arrayUndefined = [];
         datos.forEach(element => {
-            arrayUndefined.push({ x: element.x, y: element.y[0] });
+            arrayUndefined.push({ x: element.x, y: element.y[0]});
         });
         myChart.config.data.datasets[0].data = arrayUndefined;
         myChart.update();
