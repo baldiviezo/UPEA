@@ -18,7 +18,7 @@ setInterval(() => {
 const modalChart = document.getElementById('modalChart');
 const closeModalChart = document.getElementById('closeModalChart');
 closeModalChart.addEventListener('click', () => modalChart.classList.remove('modal__show'));
-const array = [];
+let array = [];
 function showChart(a) {
     modalChart.classList.add('modal__show');
     array = a;
