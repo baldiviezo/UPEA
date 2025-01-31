@@ -95,3 +95,56 @@ main div.container:hover::-webkit-scrollbar-thumb{
 .footer__button:hover{
     border: none;
 }
+/*--------------------VENTANA MODAL ----------------------------*/
+.modal{
+	/*para que salga del flujo y se quede fijo a la pantalla (desaparece)*/
+	position: fixed;
+	/*Esto ara que ocupe el 100% de alto y de ancho (Se vuelve a mostrar en la pantalla)*/
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/*color oscuro transparente para ocultar lo del fondo*/
+	background-color: #111111bd;
+	/*Esto para su hijo*/
+	display: flex;
+	/*creando custom popertis par ocultar el modal*/
+	--opacity: 0;
+	--pointer: none;
+	/*volviendo imvisible el modal*/
+	opacity: var(--opacity);
+	/*modal esta invisible pero no deja hacer click, por eso desactivamos sus eventos de click*/
+	pointer-events: var(--pointer);
+	font-family: 'Roboto', sans-serif;
+}
+/*Esta clase hace visible al modal, solo hay que añadirlo*/
+.container__chart{
+	/*como su padre tiene flexbox se puede usar el margin auto*/
+	margin: auto;
+	background-color: #fff;
+    border: .1rem solid #91939a;
+    border-radius: .3rem;
+    width: 95%;
+    height: 95%;
+    display: grid;
+    grid-template-rows: 1.5rem 1fr;
+}
+.modal__show{
+	--opacity: 1;
+	--pointer: unset;
+}
+.chart__title {
+    background-color: var(--color-background-head);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.chart__title img{
+    cursor: pointer;
+}
+.chart__body canvas{
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+}
