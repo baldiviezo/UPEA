@@ -27,7 +27,6 @@ function showChart(a) {
 let trend = {};
 let arrayUndefined = [];
 trend = {
-    labels: ,
     datasets: [{
         data: arrayUndefined,
         label: "",
@@ -77,7 +76,8 @@ setInterval(() => {
         method: "POST",
         body: JSON.stringify(array)
     }).then(response => response.json()).then(data => {
-        arrayUndefined = data.reverse();
+        datos = data.reverse();
+        arrayUndefined = [];
         datos.forEach(element => {
             arrayUndefined.push({ x: element.x, y: element.y[0]});
         });
