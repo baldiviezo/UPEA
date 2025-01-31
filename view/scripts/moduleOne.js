@@ -1,3 +1,4 @@
+//------gauge
 const values = [];
 for (let i = 0; i <= 46; i++) {
   values.push(document.getElementById(`value_edf1_${i}`));
@@ -14,9 +15,11 @@ setInterval(() => {
 }, 1000);
 
 //------chart
-
-fetch('../ttr_edf1', {
-    method: "POST"
-}).then(response => response.json()).then(data => {
-    console.log(data);
-}).catch(err => console.log(err));
+function showChart(a,b,c,d) {
+    fetch('../ttr_edf1', {
+        method: "POST",
+        body: JSON.stringify({ a: a, b: b, c: c })
+    }).then(response => response.json()).then(data => {
+        console.log(data);
+    }).catch(err => console.log(err));
+}
