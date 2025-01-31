@@ -2,7 +2,8 @@
 const header = document.querySelector('header');
 header.innerHTML = `
         <div class="header__top">
-            <h1>DEMO UPEA</h1>
+            <img src="../img/home.svg">
+            <h1>U.P.E.A.</h1>
             <img src="../img/menu.svg" class="header__menu">
         </div>
         <div class="header__bottom">
@@ -40,7 +41,6 @@ sideBar.innerHTML = `
         <div class="sidebar__body">
             <ul class="nav__list">
                 <li><a href="./moduleOne.html" class="nav__link">Modulos</a></li>
-                <li><a href="./trends.html" class="nav__link">Tendencias</a></li>
             </ul>
         </div>
     </div>

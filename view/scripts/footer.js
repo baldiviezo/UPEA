@@ -13,5 +13,5 @@ footer__buttons.forEach(button =>{
     button.addEventListener('click', ()=>{window.open(`./${button.id}.html`,"_self")})
 });
 //------Close
-const logout = document.querySelector('.logout');
-logout.addEventListener('click', ()=>{window.open(`./close.html`,"_self")});
+//const logout = document.querySelector('.logout');
+//logout.addEventListener('click', ()=>{window.open(`./close.html`,"_self")});

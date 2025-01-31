@@ -161,12 +161,3 @@ footer button:hover {
 footer .logout {
     cursor: pointer;
 }
-
-@media (max-width:800px) {
-    body {
-        min-height: 200vh;
-        display: grid;
-        grid-template-rows: 6.5rem 1fr 4rem;
-        overflow: auto;
-    }
-}
